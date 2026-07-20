@@ -10,8 +10,20 @@
   <meta property="og:type" content="website">
   <title>아이새움성향미술 가맹 안내</title>
   <link rel="stylesheet" href="css/style.css">
+
+<style id="hero-video-patch">
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;z-index:0;}
+.hero-glass{position:absolute;inset:0;background:rgba(255,255,255,.22);backdrop-filter:blur(8px);z-index:1;}
+.hero-content{position:relative;z-index:2;}
+</style>
 </head>
 <body>
+
+<video class="hero-video" autoplay muted loop playsinline>
+<source src="hero.mp4" type="video/mp4">
+</video>
+<div class="hero-glass"></div>
+
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="아이새움성향미술 홈">
