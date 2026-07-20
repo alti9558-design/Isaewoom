@@ -10,20 +10,8 @@
   <meta property="og:type" content="website">
   <title>아이새움성향미술 가맹 안내</title>
   <link rel="stylesheet" href="css/style.css">
-
-<style id="hero-video-patch">
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;z-index:0;}
-.hero-glass{position:absolute;inset:0;background:rgba(255,255,255,.22);backdrop-filter:blur(8px);z-index:1;}
-.hero-content{position:relative;z-index:2;}
-</style>
 </head>
 <body>
-
-<video class="hero-video" autoplay muted loop playsinline>
-<source src="hero.mp4" type="video/mp4">
-</video>
-<div class="hero-glass"></div>
-
   <header class="site-header">
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="아이새움성향미술 홈">
@@ -43,8 +31,12 @@
 
   <main id="top">
     <section class="hero section">
-      <div class="wrap hero-grid">
-        <div class="hero-copy reveal">
+      <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="images/hero-bg.mp4" type="video/mp4">
+      </video>
+      <div class="hero-bg-overlay" aria-hidden="true"></div>
+      <div class="wrap hero-grid hero-grid-video">
+        <div class="hero-copy hero-glass reveal">
           <p class="eyebrow">iSAEWOOM ORIENTATION ART</p>
           <h1>아이의 그림은 틀리지 않았다.<br><span class="blue">성향이 다를&nbsp;뿐!!</span></h1>
           <p class="hero-lead">성향 분석 기반 맞춤 미술교육 · 운영 시스템</p>
@@ -55,9 +47,6 @@
             <a class="btn btn-primary" href="#contact">가맹 상담 문의</a>
             <a class="btn btn-outline" href="#curriculum">커리큘럼 보기</a>
           </div>
-        </div>
-        <div class="hero-visual reveal">
-          <div class="logo-stage"><img src="images/logo.webp" alt="아이새움성향미술 로고"></div>
         </div>
       </div>
     </section>

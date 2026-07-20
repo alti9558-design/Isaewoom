@@ -141,3 +141,62 @@ footer{background:#07111F;color:#CBD5E1;border-top:1px solid rgba(255,255,255,.1
 /* Final text alignment fixes */
 .nowrap-text{white-space:nowrap}
 @media(max-width:640px){.nowrap-text{white-space:normal}}
+
+/* Hero video background */
+.hero{
+  min-height:calc(100vh - 76px);
+  display:flex;
+  align-items:center;
+  padding:86px 0;
+  background:#eaf7ff;
+  isolation:isolate;
+}
+.hero:before,.hero:after{display:none}
+.hero-bg-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  z-index:-3;
+  opacity:.58;
+}
+.hero-bg-overlay{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    radial-gradient(circle at center,rgba(255,255,255,.68) 0%,rgba(255,255,255,.48) 34%,rgba(255,255,255,.18) 72%,rgba(255,255,255,.10) 100%),
+    linear-gradient(180deg,rgba(255,255,255,.20),rgba(236,248,255,.24));
+}
+.hero-grid-video{
+  display:flex;
+  justify-content:center;
+  text-align:center;
+}
+.hero-glass{
+  width:min(820px,100%);
+  padding:52px 54px;
+  border:1px solid rgba(255,255,255,.58);
+  border-radius:34px;
+  background:rgba(255,255,255,.28);
+  box-shadow:0 28px 80px rgba(22,74,116,.16);
+  backdrop-filter:blur(10px) saturate(110%);
+  -webkit-backdrop-filter:blur(10px) saturate(110%);
+}
+.hero-glass .hero-actions,.hero-glass .chips{justify-content:center}
+.hero-glass .chips span{background:rgba(255,255,255,.72);border-color:rgba(255,255,255,.78)}
+.hero-glass .btn-outline{background:rgba(255,255,255,.78);border-color:rgba(43,121,189,.24)}
+.hero-glass h1{text-shadow:0 2px 16px rgba(255,255,255,.72)}
+@media(max-width:1020px){
+  .hero{min-height:auto;padding:82px 0}
+}
+@media(max-width:640px){
+  .hero{padding:54px 0;min-height:calc(100svh - 68px)}
+  .hero-bg-video{object-position:center top;opacity:.52}
+  .hero-glass{padding:34px 18px;border-radius:24px;background:rgba(255,255,255,.34);backdrop-filter:blur(7px)}
+  .hero-glass h1{font-size:2.35rem;line-height:1.08}
+  .hero-glass .chips{gap:7px}
+  .hero-glass .chips span{font-size:.82rem;padding:7px 10px}
+}
